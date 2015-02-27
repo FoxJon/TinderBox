@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B02335C019BF82940005A537 /* TBARequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = B02335BF19BF82940005A537 /* TBARequestData.m */; };
+		B0C70A241AA01EE0001D7BE1 /* TBAListing.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C70A231AA01EE0001D7BE1 /* TBAListing.m */; };
+		B0C70A281AA0ED21001D7BE1 /* TBAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C70A271AA0ED21001D7BE1 /* TBAConstants.m */; };
 		B0DF78EB1989D87100B82F4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DF78EA1989D87100B82F4B /* Foundation.framework */; };
 		B0DF78ED1989D87100B82F4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DF78EC1989D87100B82F4B /* CoreGraphics.framework */; };
 		B0DF78EF1989D87100B82F4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DF78EE1989D87100B82F4B /* UIKit.framework */; };
@@ -36,6 +38,10 @@
 /* Begin PBXFileReference section */
 		B02335BE19BF82940005A537 /* TBARequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBARequestData.h; sourceTree = "<group>"; };
 		B02335BF19BF82940005A537 /* TBARequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBARequestData.m; sourceTree = "<group>"; };
+		B0C70A221AA01EE0001D7BE1 /* TBAListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAListing.h; sourceTree = "<group>"; };
+		B0C70A231AA01EE0001D7BE1 /* TBAListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAListing.m; sourceTree = "<group>"; };
+		B0C70A261AA0ED21001D7BE1 /* TBAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAConstants.h; sourceTree = "<group>"; };
+		B0C70A271AA0ED21001D7BE1 /* TBAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAConstants.m; sourceTree = "<group>"; };
 		B0DF78E71989D87100B82F4B /* TinderBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DF78EA1989D87100B82F4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0DF78EC1989D87100B82F4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,13 +86,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B0DF78DE1989D87100B82F4B = {
+		B0C70A211AA01E9A001D7BE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B02335BE19BF82940005A537 /* TBARequestData.h */,
 				B02335BF19BF82940005A537 /* TBARequestData.m */,
+				B0C70A221AA01EE0001D7BE1 /* TBAListing.h */,
+				B0C70A231AA01EE0001D7BE1 /* TBAListing.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B0C70A251AA03A1A001D7BE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				B0DF79191989D95100B82F4B /* TBAViewController.h */,
 				B0DF791A1989D95100B82F4B /* TBAViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B0DF78DE1989D87100B82F4B = {
+			isa = PBXGroup;
+			children = (
+				B0C70A211AA01E9A001D7BE1 /* Model */,
+				B0C70A251AA03A1A001D7BE1 /* Controller */,
 				B0DF78F01989D87100B82F4B /* TinderBox */,
 				B0DF79091989D87100B82F4B /* TinderBoxTests */,
 				B0DF78E91989D87100B82F4B /* Frameworks */,
@@ -117,6 +141,8 @@
 		B0DF78F01989D87100B82F4B /* TinderBox */ = {
 			isa = PBXGroup;
 			children = (
+				B0C70A261AA0ED21001D7BE1 /* TBAConstants.h */,
+				B0C70A271AA0ED21001D7BE1 /* TBAConstants.m */,
 				B0DF78F91989D87100B82F4B /* TBAAppDelegate.h */,
 				B0DF78FA1989D87100B82F4B /* TBAAppDelegate.m */,
 				B0DF78FC1989D87100B82F4B /* Images.xcassets */,
@@ -257,6 +283,8 @@
 				B0DF791B1989D95100B82F4B /* TBAViewController.m in Sources */,
 				B0DF78FB1989D87100B82F4B /* TBAAppDelegate.m in Sources */,
 				B0DF78F71989D87100B82F4B /* main.m in Sources */,
+				B0C70A241AA01EE0001D7BE1 /* TBAListing.m in Sources */,
+				B0C70A281AA0ED21001D7BE1 /* TBAConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

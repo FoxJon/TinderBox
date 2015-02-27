@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TBAViewController : UIViewController
-@property NSMutableArray * makeInfo;
-@property NSMutableArray * modelInfo;
-@property NSMutableArray * photo;
 
 @end
