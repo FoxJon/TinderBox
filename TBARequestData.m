@@ -10,17 +10,13 @@
 
 @implementation TBARequestData
 
-+(NSArray *)requestData {
-    NSArray * info = @[];
-    
-    NSString *locationURL = [NSString stringWithFormat:@"http://reverb.com/api/listings"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:locationURL]];
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request  returningResponse:nil error:nil];
-    NSDictionary * data = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-    
-    info = data[@"listings"];
-
-    return info;
++(void)listingsTaskWithCompletion:(void (^)(NSData *data, NSError *error))completionBlock{
+    __block NSURLSessionTask *task = nil;
+    NSURLSession *session = [NSURLSession sharedSession];
+    task = [session dataTaskWithURL:[NSURL URLWithString:@"http://reverb.com/api/listings"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+        completionBlock(data, error);
+    }];
+    [task resume];
 }
 
 @end

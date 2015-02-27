@@ -10,6 +10,6 @@
 
 @interface TBARequestData : NSObject
 
-+(NSArray *)requestData;
++(void)listingsTaskWithCompletion:(void (^)(NSData *data, NSError *error))completionBlock;
 
 @end
