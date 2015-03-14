@@ -33,11 +33,16 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeGrayBox) name:@"TBAListingDidFinishLoading" object:nil];
-        self.listing = [[TBAListing alloc]init];
         self.index = 0;
         [self fetchListing];
     }
     return self;
+}
+
+
+-(TBAListing *)listing{
+    if (!_listing) self.listing = [[TBAListing alloc]init];
+    return _listing;
 }
 
 
