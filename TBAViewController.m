@@ -65,7 +65,6 @@
 
 -(void)removeGrayBoxAndMakeNewBox {
     [grayBox removeFromSuperview];
-    [UIView animateWithDuration:0.4 animations:nil];
     
     if (self.index > self.listing.makeInfo.count-1) {
         self.index = 0;

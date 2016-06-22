@@ -13,7 +13,7 @@
 +(void)listingsTaskWithCompletion:(void (^)(NSData *data, NSError *error))completionBlock{
     __block NSURLSessionTask *task = nil;
     NSURLSession *session = [NSURLSession sharedSession];
-    task = [session dataTaskWithURL:[NSURL URLWithString:@"http://reverb.com/api/listings"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+    task = [session dataTaskWithURL:[NSURL URLWithString:@"https://reverb.com/api/listings"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
         completionBlock(data, error);
     }];
     [task resume];
